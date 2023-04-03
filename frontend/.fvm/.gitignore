@@ -1,0 +1,4 @@
+# % cd ${workspaceFolder}/frontend
+# % fvm use
+# ... then the tool links your Flutter SDK to below.
+flutter_sdk
