@@ -5,16 +5,19 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.black,
-      child: Column(
-        children: [
-          Row(
-            children: const [
-              Text('This is footer'),
-            ],
-          ),
-        ],
+    return Positioned(
+      bottom: 0,
+      child: Container(
+        color: Colors.black,
+        child: Column(
+          children: [
+            Row(
+              children: const [
+                Text('This is footer'),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

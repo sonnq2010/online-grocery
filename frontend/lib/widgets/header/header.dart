@@ -1,20 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:indexed/indexed.dart';
 import 'package:online_grocery/pages/base_page/base_controller.dart';
 import 'package:online_grocery/theme_constant.dart';
 import 'package:online_grocery/widgets/header/child_widgets/action_button_group.dart';
 import 'package:online_grocery/widgets/header/child_widgets/branding.dart';
 import 'package:online_grocery/widgets/header/child_widgets/search_bar.dart';
 
-class Header extends StatefulWidget implements IndexedInterface {
+class Header extends StatefulWidget {
   const Header({super.key});
 
   @override
   State<Header> createState() => _HeaderState();
-
-  @override
-  int get index => 100;
 }
 
 class _HeaderState extends State<Header> {
