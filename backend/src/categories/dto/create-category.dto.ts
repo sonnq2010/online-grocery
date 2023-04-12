@@ -6,8 +6,4 @@ export class CreateCategoryDto {
     @IsString()
     @MaxLength(50)
     name: string;
-
-    @IsNotEmpty()
-    @IsString()
-    description: string;
 }
