@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { Category, PrismaClient } from '@prisma/client';
+import { PrismaClient } from '@prisma/client';
+import prisma from 'src/prisma/prisma.service';
 
 @Injectable()
 export class CategoriesService {
@@ -7,30 +8,26 @@ export class CategoriesService {
 
     // Get all categories
     async findAll() {
-        let response: Category[] = await this.prisma.category.findMany();
-        console.log(response)
-
-        return "con cac"
-
+        return await prisma.category.findMany();
     }
 
     // Get a single category by id
     async findOne(id: string) {
-        return await this.prisma.category.findUnique({
+        return await prisma.category.findUnique({
             where: { id },
         });
     }
 
     // Create a new category
     async create(data: any) {
-        return await this.prisma.category.create({
+        return await prisma.category.create({
             data,
         });
     }
 
     // Update a category by id
     async update(id: string, data: any) {
-        return await this.prisma.category.update({
+        return await prisma.category.update({
             where: { id },
             data,
         });
@@ -38,7 +35,7 @@ export class CategoriesService {
 
     // Delete a category by id
     async remove(id: string) {
-        return await this.prisma.category.delete({
+        return await prisma.category.delete({
             where: { id },
         });
     }
