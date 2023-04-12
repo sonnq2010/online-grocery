@@ -7,5 +7,6 @@ import { ProductsModule } from './products/products.module';
     CategoriesModule,
     ProductsModule,
   ],
+  providers: [],
 })
-export class AppModule {}
+export class AppModule { }

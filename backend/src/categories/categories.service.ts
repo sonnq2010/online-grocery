@@ -1,13 +1,17 @@
 import { Injectable } from '@nestjs/common';
-import { PrismaClient } from '@prisma/client';
+import { Category, PrismaClient } from '@prisma/client';
 
 @Injectable()
 export class CategoriesService {
-    constructor(private readonly prisma: PrismaClient) { }
+    private readonly prisma: PrismaClient;
 
     // Get all categories
     async findAll() {
-        return await this.prisma.category.findMany();
+        let response: Category[] = await this.prisma.category.findMany();
+        console.log(response)
+
+        return "con cac"
+
     }
 
     // Get a single category by id
