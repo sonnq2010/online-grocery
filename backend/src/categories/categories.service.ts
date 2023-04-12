@@ -4,7 +4,6 @@ import prisma from 'src/prisma/prisma.service';
 
 @Injectable()
 export class CategoriesService {
-    private readonly prisma: PrismaClient;
 
     // Get all categories
     async findAll() {
